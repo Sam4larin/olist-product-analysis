@@ -88,7 +88,7 @@ each column is months since first purchase. Dark red = near-zero retention.
 | Tool | Used for | Why not something else |
 |---|---|---|
 | SQL + DuckDB | Funnel and segment analysis across 6 joined tables | Set-based aggregation is cleaner in SQL than pandas for this type of multi-table join |
-| Python (pandas) | Cohort matrix construction | Pivoting and period arithmetic require pandas — SQL can produce the numbers but not the matrix shape |
+| Python (pandas) | Cohort matrix construction | Pivoting and period arithmetic require pandas, SQL can produce the numbers but not the matrix shape |
 | Seaborn + Matplotlib | Heatmap and retention curve | Standard Python visualisation stack; output is reproducible and version-controlled |
 
 ---
@@ -103,7 +103,7 @@ pip install -r requirements.txt
 ```
 
 Download the dataset from
-[Kaggle — Brazilian E-Commerce by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+[Kaggle: Brazilian E-Commerce by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 and place the 7 CSV files in `data/`.
 ```bash
 python scripts/run_all.py
